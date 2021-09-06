@@ -1,59 +1,62 @@
-def hamming(vetor1, vetor2):
+def hamming(list1, list2):
 
-    count=0
-    indice_diferenca=[]
-    for i in range(0,len(vetor1)):
-        if vetor1[i] != vetor2[i]:
+    count = 0
+    differenceIndex = []
 
-            indice_diferenca.append(i + 1)
-            count+= 1
+    for i in range(0, len(list1)):
+        if list1[i] != list2[i]:
 
-    return count, indice_diferenca
+            differenceIndex.append(i + 1)
+            count += 1
 
-def compara(k,vetorA,vetorB):
+    return count, differenceIndex
 
-    posicao_inicial=[]
-    i=0
-    lista_diferenca = []
-    while i <= (len(vetorB) - len(vetorA)):
+def compare(k, listA, listB):
 
-        vetorTemp = vetorB[i:i + len(vetorA)]
-        result, indice_diferenca = hamming(vetorA,vetorTemp)
+    startingPosition = []
+    i = 0
+    listDifference = []
+
+    while i <= (len(listB) - len(listA)):
+
+        listTemp = listB[i:i + len(listA)]
+        result, differenceIndex = hamming(listA, listTemp)
 
         if  (result <= k):
 
-            posicao_inicial.append(i + 1)
-            lista_diferenca.append(indice_diferenca)
+            startingPosition.append(i + 1)
+            listDifference.append(differenceIndex)
         i+=1
 
 
-    return posicao_inicial, lista_diferenca
+    return startingPosition, listDifference
 
-def imprimir(k, indice, diferenca):
+def functionPrint(k, index, difference):
 
-    print("As substrings com distância no máximo", k, " do mofit e as  posições são:")
+    print("Substrings with maximum distance", k, " from mofit and positions are:")
 
-    for i in range(0,len(indice)):
+    for i in range(0, len(index)):
 
-        print(indice[i], end=" ")
+        print(index[i], end = " ")
 
-        for j in range(0,len(diferenca[i])):
+        for j in range(0, len(difference[i])):
 
-            print(diferenca[i][j], end=" ")
+            print(difference[i][j], end = " ")
+
         print()
 
 
 
-k = int(input("Digite o valor de k(valor máximo = 50): "))
-motif = input("Digite o motif(máximo 50 caracteres): ")
-dna = input("Digite o DNA(máximo 500 caracteres: ")
+k = int(input("Type the valor of k(max value = 50): "))
+motif = input("Type the motif(max characters = 50): ")
+dna = input("Type the DNA(max characters = 500): ")
 
 if k > 50 or len(motif) > 50 or len(dna) > 500:
 
-    print("Valores não estão de acordo!")
+    print("Values exceeded the maximum value!")
 
 else:
 
-    indice, diferenca = compara(k,motif,dna)
+    index, difference = compare(k, motif, dna)
 
-    imprimir(k,indice, diferenca)
+    functionPrint(k, index, difference)
