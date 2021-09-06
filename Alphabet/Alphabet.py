@@ -1,39 +1,39 @@
-def palavras_geradas(n, vetor_letras):
+def generatedWords(n, listLetters):
 
-    vetor_palavras_geradas=[]
+    listGeneratedWords=[]
 
     for i in range(0, n):
-        vetor_palavras_geradas.append(vetor_letras[i])
+        listGeneratedWords.append(listLetters[i])
 
     for t in range(1, n):
-        if t==1:
+        if t == 1:
             for i in range(0, n):
                 for j in range(0, n):
 
-                    palavras_geradas = vetor_letras[i] + vetor_palavras_geradas[j]
-                    vetor_palavras_geradas.append(palavras_geradas)
+                    generatedWords = listLetters[i] + listGeneratedWords[j]
+                    listGeneratedWords.append(generatedWords)
         if t == 2:
             for i in range(0, n):
                 for j in range(0, (n**t)):
 
-                    palavras_geradas = vetor_letras[i] + vetor_palavras_geradas[(j+(n**(t-1)))]
-                    vetor_palavras_geradas.append(palavras_geradas)
+                    generatedWords = listLetters[i] + listGeneratedWords[(j + (n ** (t - 1)))]
+                    listGeneratedWords.append(generatedWords)
         if t > 2:
             for i in range(0, n):
                 for j in range(0, (n**t)):
 
-                    palavras_geradas = vetor_letras[i] + vetor_palavras_geradas[((j+n)+(n**(t-1)))]
-                    vetor_palavras_geradas.append(palavras_geradas)
+                    generatedWords = listLetters[i] + listGeneratedWords[((j + n) + (n ** (t - 1)))]
+                    listGeneratedWords.append(generatedWords)
 
-    return vetor_palavras_geradas
+    return listGeneratedWords
 
 #-----------------------------------CORPO DO PROGRAMA--------------------------------------------
 
-nome = input("Digite as letras: ")
-vetor_letras = nome.split()
+name = input("Type the letters: ")
+listLetters = name.split()
 
-n = len(vetor_letras)
+n = len(listLetters)
 
-vetor_palavras = palavras_geradas(n, vetor_letras)
+listWords = generatedWords(n, listLetters)
 
-print(vetor_palavras)
+print(listWords)
