@@ -99,11 +99,14 @@
 
 ##
 <a name="shop"></a>
+
 ### Shop
 
 #### Português
 
-* Esse programa...
+* Esse programa cadastra um número x de lojas e um número y de produtos vendidos nessas lojas. Além disso, ele atribui valores aleatórios aos preços dos produtos
+ baseado em um range definido pelo usuário. Por fim, ele imprime qual loja tem o menor preço para cada um dos produtos cadastrados e quanto o usuário gastaria
+ para comprar esses produtos considerando os menores preços.
 
 #### English
 
@@ -116,7 +119,8 @@
 
 #### Português
 
-* Esse programa...
+* Esse programa recebe o nome completo de uma ou mais pessoas e armazena em uma lista, quando é digitado um nome em branco, ele imprime todos os nomes da lista 
+abreviando os nomes do meio. Ex: José dos Santos Silva Pacheco --> José S. S. Pacheco
 
 #### English
 
@@ -129,7 +133,7 @@
 
 #### Português
 
-* Esse programa...
+* Esse programa calcula de quantas maneiras diferentes podemos subir uma escada com x degraus, podendo subir no máximo 2 degraus por vez.
 
 #### English
 
