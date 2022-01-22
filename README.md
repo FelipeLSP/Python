@@ -168,7 +168,7 @@ abbreviating middle names. Ex: José dos Santos Silva Pacheco --> José S. S. Pa
 
 #### Português
 
-* Esse programa faz parte do curso de Flask da Alura. Nele estamos construindo um biblioteca de jogos.
+* Esse programa faz parte do curso de Flask da Alura. Nele estamos construindo uma biblioteca de jogos.
 
 #### English
 
