@@ -91,7 +91,7 @@
 
 #### Português
 
-* Esse programa..
+* Esse programa armazena uma distância x e o diâmetro y de uma roda e calcula a ordem de grandeza da quantidade de voltas efetuadas pela roda ao percorrer a distância x.
 
 #### English
 
@@ -159,7 +159,7 @@ abreviando os nomes do meio. Ex: José dos Santos Silva Pacheco --> José S. S. 
 
 #### Português
 
-* Esse programa...
+* Esse programa faz parte do curso de Flask da Alura. Nele estamos construindo um biblioteca de jogos.
 
 #### English
 
