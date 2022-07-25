@@ -1,4 +1,3 @@
-## Em construção | In building...
 ## Sobre os programas nesse repositório. | About the programs in this repository.
 
 
@@ -80,11 +79,11 @@
 
 #### Português
 
-* Esse programa...
+* 
 
 #### English
 
-* This program...
+* 
 
 ##
 <a name="order"></a>
